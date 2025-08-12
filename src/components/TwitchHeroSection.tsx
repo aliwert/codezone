@@ -139,7 +139,7 @@ export default function TwitchHeroSection() {
 
                   {/* subscribe button */}
                   <button
-                    className="flex items-center bg-black text-white rounded-lg transition-colors"
+                    className="flex items-center bg-[#222123] text-white rounded-lg transition-colors"
                     style={{
                       width: "120px",
                       height: "37.091740669121776px",
