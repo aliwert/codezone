@@ -1,9 +1,9 @@
-import Image from "next/image";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
   return (
-    <div>
-      <p className="text-center text-red-500">welcome to codezone project</p>
+    <div className="min-h-screen bg-black flex justify-center">
+      <HeroSection />
     </div>
   );
 }
