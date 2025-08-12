@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function HeroSection() {
   return (
     <section
-      className="relative mx-auto overflow-hidden bg-black"
+      className="relative mx-auto overflow-hidden bg-zinc-800"
       style={{
         width: "1440px",
         height: "703px",

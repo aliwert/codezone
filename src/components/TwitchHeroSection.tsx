@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TwitchHeroSection() {
   return (
-    <section className="relative w-full min-h-screen bg-[#131313] overflow-hidden Saira">
+    <section className="relative w-full min-h-screen bg-zinc-800 overflow-hidden Saira">
       {/* background container */}
       <div className="absolute inset-0 z-0">
         {/* background texture */}
