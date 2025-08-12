@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TwitchHeroSection() {
   return (
-    <section className="relative w-full min-h-screen bg-black overflow-hidden Saira">
+    <section className="relative w-full min-h-screen bg-[#131313] overflow-hidden Saira">
       {/* background container */}
       <div className="absolute inset-0 z-0">
         {/* background texture */}
@@ -39,80 +39,82 @@ export default function TwitchHeroSection() {
 
             {/* center column twitch content */}
             <div className="flex flex-col items-center justify-start space-y-6 relative">
-              <div className="w-full h-[300px] absolute -top-100 right-16 transform -rotate-[2deg] p-4">
+              <div className="w-full h-[300px] absolute -top-100 right-16 transform -rotate-[1deg] p-4">
                 {/* twitch logo and content */}
-                <div className="absolute top-4 left-4 flex items-start gap-2">
+                <div className="absolute top-4 left-3">
                   <Image
                     src="/twitch.svg"
                     alt="Twitch logo"
-                    width={200}
+                    width={225}
                     height={150}
                   />
-
-                  {/* separator */}
-                  <div
-                    className="opacity-80"
-                    style={{
-                      width: "10.6693696975708px",
-                      height: "144.6890106201172px",
-                      border: "0.1px solid #3B3B3B",
-                      rotate: "-3deg",
-                    }}
-                  >
-                    <Image
-                      src="/seperate.svg"
-                      alt="separator"
-                      width={10.6693696975708}
-                      height={144.6890106201172}
-                      className="object-contain w-full h-full"
-                    />
-                  </div>
-
-                  {/* text content */}
-                  <div className="flex flex-col justify-start  text-left -rotate-[4deg]">
-                    <h2
-                      className="text-white uppercase"
-                      style={{
-                        fontFamily: "Saira Condensed",
-                        fontWeight: 300,
-                        fontSize: "68.24px",
-                        lineHeight: "89%",
-                        letterSpacing: "0%",
-                      }}
-                    >
-                      HER HAFTA
-                    </h2>
-                    <h2
-                      className="text-[#F0E74D] uppercase"
-                      style={{
-                        fontFamily: "Saira Condensed",
-                        fontWeight: 700,
-                        fontSize: "68.24px",
-                        lineHeight: "89%",
-                        letterSpacing: "0%",
-                      }}
-                    >
-                      CANLIDAYIZ
-                    </h2>
-                    <p
-                      className="text-white mt-1"
-                      style={{
-                        fontFamily: "Saira",
-                        fontWeight: 700,
-                        fontSize: "16px",
-                        lineHeight: "104%",
-                        letterSpacing: "1.5%",
-                      }}
-                    >
-                      Bizi Takip Edin!
-                    </p>
-                  </div>
                 </div>
 
-                <div className="absolute bottom-12 left-30 flex items-center gap-4 -rotate-[4deg]">
+                {/* separator */}
+                <div
+                  className="absolute opacity-80"
+                  style={{
+                    left: "220px",
+                    top: "10px",
+                    width: "10.6693696975708px",
+                    height: "180px",
+                    rotate: "-1deg",
+                  }}
+                >
+                  <Image
+                    src="/seperate.svg"
+                    alt="separator"
+                    width={10.6693696975708}
+                    height={180}
+                    className="object-contain w-full h-full"
+                    style={{ filter: "brightness(1.2) contrast(1.1)" }}
+                  />
+                </div>
+
+                {/* text content */}
+                <div className="absolute top-4 left-[250px] flex flex-col justify-start text-left -rotate-[4deg]">
+                  <h2
+                    className="text-white uppercase"
+                    style={{
+                      fontFamily: "Saira Condensed",
+                      fontWeight: 300,
+                      fontSize: "68.24px",
+                      lineHeight: "89%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    HER HAFTA
+                  </h2>
+                  <h2
+                    className="text-[#F0E74D] uppercase"
+                    style={{
+                      fontFamily: "Saira Condensed",
+                      fontWeight: 700,
+                      fontSize: "68.24px",
+                      lineHeight: "89%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    CANLIDAYIZ
+                  </h2>
+                  <p
+                    className="text-white mt-2"
+                    style={{
+                      fontFamily: "Saira",
+                      fontWeight: 700,
+                      fontSize: "16px",
+                      lineHeight: "104%",
+                      letterSpacing: "1.5%",
+                    }}
+                  >
+                    Bizi Takip Edin!
+                  </p>
+                </div>
+
+                <div className="absolute bottom-12 left-40 flex items-center gap-4 -rotate-[2deg]">
                   {/* follow button */}
                   <button
-                    className="flex items-center bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+                    className="flex items-center bg-[#864CF6]  text-white rounded-lg transition-colors"
                     style={{
                       width: "106.25103287457594px",
                       height: "37.091740669121776px",
@@ -137,7 +139,7 @@ export default function TwitchHeroSection() {
 
                   {/* subscribe button */}
                   <button
-                    className="flex items-center bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                    className="flex items-center bg-black text-white rounded-lg transition-colors"
                     style={{
                       width: "120px",
                       height: "37.091740669121776px",
@@ -178,6 +180,28 @@ export default function TwitchHeroSection() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* konser.jpg */}
+      <div className="absolute bottom-[350px] h-[250px] z-5 w-full max-w-[1300px] left-1/2 transform -translate-x-1/2">
+        <Image
+          src="/konser.jpg"
+          alt="Concert scene"
+          fill
+          className="object-cover opacity-40"
+          style={{ filter: "grayscale(0.7) contrast(0.8) brightness(0.6)" }}
+        />
+      </div>
+
+      {/* Vector-2.svg */}
+      <div className="absolute bottom-[300px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
+        <Image
+          src="/Vector3.svg"
+          alt="segmented bottom edge"
+          width={1400}
+          height={186}
+          className="w-full h-auto"
+        />
       </div>
     </section>
   );
