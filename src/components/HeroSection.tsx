@@ -71,7 +71,7 @@ export default function HeroSection() {
               HABERLERİNİ TAKİP ET
             </h1>
 
-            <p className="mb-8 max-w-[420px] text-[15px] leading-[1.6] text-white">
+            <p className="mb-6 max-w-[420px] text-[15px] leading-[1.6] text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -79,36 +79,42 @@ export default function HeroSection() {
             </p>
 
             {/* cta */}
-            <div className="relative w-[130px] h-[42px] select-none cursor-pointer hover:opacity-90 transition-opacity">
+            <div className="relative w-[130px] h-[42px] top-[12px] select-none cursor-pointer hover:opacity-90 transition-opacity">
               <Image src="/devaminioku.svg" alt="Devamını Oku" fill priority />
               <span
-                className="absolute left-[16px] top-[9px] text-[14px] font-bold"
+                className="absolute left-[16px] top-[6px] text-[14px] font-bold"
                 style={{ fontFamily: "Saira, sans-serif", color: "#121212" }}
               >
                 Devamını Oku
               </span>
             </div>
-          </div>
-        </div>
 
-        {/* pagination dots */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-12 z-20 flex items-center gap-2">
-          <Image src="/Ellipse 3.svg" alt="dot" width={6} height={6} />
-          <Image src="/Ellipse 4.svg" alt="dot" width={6} height={6} />
-          <Image src="/Ellipse 6.svg" alt="active-dot" width={12} height={12} />
-          <Image src="/Ellipse 7.svg" alt="dot" width={6} height={6} />
-          <Image src="/Ellipse 8.svg" alt="dot" width={6} height={6} />
+            {/* pagination dots */}
+            <div className="relative z-20 mt-32 flex items-center gap-2 top-8">
+              <Image src="/Ellipse 3.svg" alt="dot" width={6} height={6} />
+              <Image src="/Ellipse 3.svg" alt="dot" width={6} height={6} />
+              <Image src="/Ellipse 4.svg" alt="dot" width={6} height={6} />
+              <Image
+                src="/Ellipse 6.svg"
+                alt="active-dot"
+                width={12}
+                height={12}
+              />
+              <Image src="/Ellipse 7.svg" alt="dot" width={6} height={6} />
+              <Image src="/Ellipse 8.svg" alt="dot" width={6} height={6} />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* left arrow  */}
-      <button className="absolute left-6 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
-        <Image src="/left-arrow.svg" alt="Previous" width={32} height={32} />
+      <button className="absolute left-15 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
+        <Image src="/left-arrow.svg" alt="Previous" width={24} height={24} />
       </button>
 
       {/* right arrow */}
-      <button className="absolute right-6 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
-        <Image src="/right-arrow.svg" alt="Next" width={32} height={32} />
+      <button className="absolute right-10 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
+        <Image src="/right-arrow.svg" alt="Next" width={24} height={24} />
       </button>
 
       {/* bottom torn vector */}
@@ -121,6 +127,7 @@ export default function HeroSection() {
           className="w-full h-auto"
         />
       </div>
+      <div></div>
     </section>
   );
 }
