@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TwitchHeroSection() {
   return (
-    <section className="relative w-full min-h-screen bg-zinc-800 overflow-hidden Saira">
+    <section className="relative w-full h-[80vh] bg-zinc-800 overflow-hidden Saira">
       {/* background container */}
       <div className="absolute inset-0 z-0">
         {/* background texture */}
@@ -20,12 +20,12 @@ export default function TwitchHeroSection() {
       </div>
 
       {/* main content */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center min-h-screen">
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
         <div className="w-full max-w-[1400px] mx-auto px-8">
           <div className="grid grid-cols-3 gap-8 items-center h-full">
             {/* left column man image */}
             <div className="flex justify-end">
-              <div className="w-[350px] h-[450px] relative overflow-hidden rounded-lg transform translate-x-8 -translate-y-31">
+              <div className="w-[350px] h-[450px] relative overflow-hidden rounded-lg transform translate-x-8 -translate-y-31 z-50">
                 <Image
                   src="/2T1A9931 1.png"
                   alt="Male streamer"
@@ -111,7 +111,7 @@ export default function TwitchHeroSection() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-12 left-40 flex items-center gap-4 -rotate-[2deg]">
+                <div className="absolute bottom-12 left-40 flex items-center gap-4 rotate-[-4deg]">
                   {/* follow button */}
                   <button
                     className="flex items-center bg-[#864CF6]  text-white rounded-lg transition-colors"
@@ -183,7 +183,7 @@ export default function TwitchHeroSection() {
       </div>
 
       {/* konser.jpg */}
-      <div className="absolute bottom-[350px] h-[250px] z-5 w-full max-w-[1300px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[250px] h-[200px] z-5 w-full max-w-[1300px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/konser.jpg"
           alt="Concert scene"
@@ -194,7 +194,7 @@ export default function TwitchHeroSection() {
       </div>
 
       {/* Vector-2.svg */}
-      <div className="absolute bottom-[300px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[170px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/Vector3.svg"
           alt="segmented bottom edge"
