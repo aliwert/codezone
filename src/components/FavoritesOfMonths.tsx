@@ -9,18 +9,21 @@ const musicCards = [
     song: "CURTIS",
     ranking: "Top 10 (2. Sıra)",
     coverImage: "/50cent.png",
+    vectorImage: "/yellow-vector.svg",
   },
   {
     artist: "SNOPP DOGG",
     song: "ALGORITHM",
     ranking: "Top 10 (3. Sıra)",
     coverImage: "/snoppdogg.png",
+    vectorImage: "/yellowvector2.svg",
   },
   {
     artist: "CEZA",
     song: "RÜZGAR",
     ranking: "Top 10 (1. Sıra)",
     coverImage: "/ceza.png",
+    vectorImage: "/yellowvector3.svg",
   },
 ];
 
@@ -108,7 +111,7 @@ export default function FavoritesOfMonths() {
               className="w-[274px] h-[264px] relative bg-[#2A2A2A] rounded-lg overflow-hidden group cursor-pointer"
             >
               {/* album cover */}
-              <div className="absolute w-[240px] h-[180px] transition-all duration-500 ease-in-out left-[-55%] top-[50px] -rotate-[15deg] group-hover:left-1/2 group-hover:top-1/2 group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:rotate-0 z-20">
+              <div className="absolute w-[240px] h-[180px] transition-all duration-500 ease-in-out left-[-48%] top-[40px] -rotate-[15deg] group-hover:left-1/2 group-hover:top-[45%] group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:rotate-0 z-20">
                 <Image
                   src={card.coverImage}
                   alt={`${card.artist} - ${card.song}`}
@@ -129,7 +132,7 @@ export default function FavoritesOfMonths() {
 
               {/* text content */}
               <div
-                className="absolute text-white transition-opacity duration-500 group-hover:opacity-0 z-10"
+                className="absolute text-white transition-opacity duration-500 group-hover:opacity-0 z-10 flex flex-col items-end gap-2"
                 style={{
                   top: "50px",
                   right: "40px",
@@ -137,21 +140,32 @@ export default function FavoritesOfMonths() {
                   textAlign: "right",
                 }}
               >
-                {/* ranking badge */}
-                <div className="inline-block px-3 py-6 rounded-4xl bg-white/10 text-l font-medium mb-4">
+                {/* ranking */}
+                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/10 text-sm font-medium whitespace-nowrap">
                   {card.ranking}
                 </div>
 
-                {/* artist */}
-                <div className="text-xl font-medium opacity-80 tracking-wide mb-10">
-                  {card.artist}
-                </div>
-
-                {/* song */}
-                <div className="text-lg font-bold tracking-wide">
-                  {card.song}
+                {/* artist + song */}
+                <div className="flex flex-col items-center">
+                  <div className="text-xl text-white">{card.artist}</div>
+                  <div className="text-lg font-extrabold">{card.song}</div>
                 </div>
               </div>
+              <div
+                aria-hidden
+                className="absolute bottom-0 left-0 w-full h-[20px] bg-[#121214] z-10"
+              />
+
+              {/* yellow vector */}
+              <Image
+                src={card.vectorImage}
+                alt="Decorative yellow vector"
+                width={274}
+                height={56}
+                priority={false}
+                className="absolute bottom-0 left-0 w-full z-20 select-none pointer-events-none"
+                draggable={false}
+              />
             </div>
           ))}
         </div>
@@ -168,7 +182,7 @@ export default function FavoritesOfMonths() {
         }}
       >
         <div
-          className="bg-yellow-400 h-full rounded-full"
+          className="bg-[#F0E74D] h-full rounded-full"
           style={{ width: "24%" }}
         />
       </div>
