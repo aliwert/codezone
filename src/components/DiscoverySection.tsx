@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import React from "react";
-import { FiAlignJustify, FiSearch, FiSend } from "react-icons/fi";
+import {
+  FiAlignJustify,
+  FiSearch,
+  FiSend,
+  FiArrowRight as ArrowRight,
+} from "react-icons/fi";
 import { BiGridVertical } from "react-icons/bi";
 import { FaFacebookF, FaSpotify } from "react-icons/fa6";
 import { FaTwitter, FaDiscord, FaYoutube } from "react-icons/fa";
@@ -68,7 +73,7 @@ const categoryButtons = [
 ];
 
 export default function DiscoverySection() {
-  const [viewMode, setViewMode] = React.useState<ViewMode>("grid");
+  const [viewMode, setViewMode] = React.useState<ViewMode>("list");
   const [activeCategory, setActiveCategory] = React.useState<number>(2);
 
   const isGrid = viewMode === "grid";
@@ -82,9 +87,14 @@ export default function DiscoverySection() {
       }}
     >
       {/* header */}
-      <div className="mb-10 grid grid-cols-12 items-center gap-4">
+      <div className="mb-10 grid grid-cols-12 items-center gap-2">
         {/* left title */}
-        <div className="col-span-12 sm:col-span-7 flex items-center gap-4">
+        <div
+          className="col-span-12 sm:col-span-6 flex items-center gap-4"
+          style={{
+            marginBottom: "50px",
+          }}
+        >
           <h2
             className="text-white uppercase font-bold tracking-tight"
             style={{
@@ -101,39 +111,36 @@ export default function DiscoverySection() {
         </div>
 
         {/* right */}
-        <div className="col-span-12 sm:col-span-5 flex items-center gap-3 text-white">
-          <button
-            type="button"
-            className="p-2 rounded-md border border-white/30 hover:border-white/60 transition-colors"
-            title="Ara"
-          >
-            <FiSearch size={18} />
+        <div
+          className="col-span-12 sm:col-span-6 flex items-center gap-3 text-white"
+          style={{
+            marginBottom: "50px",
+          }}
+        >
+          <button type="button" className="p-2 rounded-md " title="Ara">
+            <Image src="/search.svg" alt="Search" width={30} height={18} />
           </button>
           <button
             type="button"
             aria-pressed={!isGrid}
             onClick={() => setViewMode("list")}
-            className={`p-2 rounded-md border transition-colors ${
-              !isGrid
-                ? "bg-white text-black border-white"
-                : "bg-transparent border-white/30 hover:border-white/60"
+            className={`p-2 rounded-md transition-colors ${
+              !isGrid ? "bg-white text-black " : "bg-transparent"
             }`}
             title="Liste görünümü"
           >
-            <FiAlignJustify size={18} />
+            <FiAlignJustify size={30} />
           </button>
           <button
             type="button"
             aria-pressed={isGrid}
             onClick={() => setViewMode("grid")}
-            className={`p-2 rounded-md border transition-colors ${
-              isGrid
-                ? "bg-white text-black border-white"
-                : "bg-transparent border-white/30 hover:border-white/60"
+            className={`p-2 rounded-md transition-colors ${
+              isGrid ? "bg-white text-black " : "bg-transparent "
             }`}
             title="Izgara görünümü"
           >
-            <BiGridVertical size={18} />
+            <BiGridVertical size={30} />
           </button>
         </div>
       </div>
@@ -146,6 +153,27 @@ export default function DiscoverySection() {
             <div className="grid grid-cols-2 gap-x-10 gap-y-12">
               {featuredItems.map((item) => (
                 <article key={item.id} className="flex flex-col">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={item.author.avatar}
+                      alt={item.author.name}
+                      width={33}
+                      height={33}
+                      className="rounded-full object-cover"
+                      style={{
+                        marginBottom: "40px",
+                      }}
+                    />
+                    <span
+                      className="text-white"
+                      style={{
+                        fontFamily: "var(--font-saira), sans-serif",
+                        marginBottom: "40px",
+                      }}
+                    >
+                      {item.author.name}
+                    </span>
+                  </div>
                   <div className="relative w-full aspect-[302/197] overflow-hidden rounded-md bg-black/20">
                     <Image
                       src={item.image}
@@ -157,26 +185,13 @@ export default function DiscoverySection() {
                   </div>
 
                   <div
-                    className="mt-4 text-white/70"
-                    style={{ fontFamily: "var(--font-saira), sans-serif" }}
+                    className="mt-4 text-[#363636]"
+                    style={{
+                      fontFamily: "var(--font-saira), sans-serif",
+                      marginTop: "30px",
+                    }}
                   >
                     {item.date}
-                  </div>
-
-                  <div className="mt-4 flex items-center gap-3">
-                    <Image
-                      src={item.author.avatar}
-                      alt={item.author.name}
-                      width={33}
-                      height={33}
-                      className="rounded-full object-cover"
-                    />
-                    <span
-                      className="text-white"
-                      style={{ fontFamily: "var(--font-saira), sans-serif" }}
-                    >
-                      {item.author.name}
-                    </span>
                   </div>
 
                   <h3
@@ -184,19 +199,33 @@ export default function DiscoverySection() {
                     style={{
                       fontFamily: "var(--font-saira-condensed), sans-serif",
                       fontSize: "25px",
+                      marginTop: "20px",
                     }}
                   >
                     {item.title}
                   </h3>
 
-                  <div className="mt-4 h-px w-full bg-white/60" />
+                  <div
+                    className="mt-4 h-px w-full bg-white/60"
+                    style={{
+                      marginTop: "20px",
+                    }}
+                  />
 
                   <button
                     type="button"
-                    className="mt-4 w-fit text-white hover:text-[#F0E74D] transition-colors"
-                    style={{ fontFamily: "var(--font-saira), sans-serif" }}
+                    className="mt-4 w-fit text-white transition-colors group inline-flex items-center"
+                    style={{
+                      fontFamily: "var(--font-saira), sans-serif",
+                      marginTop: "20px",
+                    }}
                   >
                     {item.readMoreLink}
+                    <ArrowRight
+                      size={22}
+                      className="text-[#F0E74D] opacity-0 group-hover:opacity-100 transition-opacity duration-800"
+                      style={{ marginLeft: "8px" }}
+                    />
                   </button>
                 </article>
               ))}
@@ -205,14 +234,26 @@ export default function DiscoverySection() {
             <div className="flex flex-col gap-10">
               {featuredItems.map((item) => (
                 <article key={item.id} className="flex gap-6">
-                  <div className="relative w-[302px] h-[198px] overflow-hidden rounded-md bg-black/20 flex-shrink-0">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 302px"
-                    />
+                  {/* left image + date */}
+                  <div className="flex-shrink-0 w-[302px]">
+                    <div className="relative w-[302px] h-[198px] overflow-hidden rounded-md bg-black/20">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 302px"
+                      />
+                    </div>
+                    <div
+                      className=" text-[#363636]"
+                      style={{
+                        fontFamily: "var(--font-saira), sans-serif",
+                        marginTop: "30px",
+                      }}
+                    >
+                      {item.date}
+                    </div>
                   </div>
 
                   <div className="flex-1 flex flex-col gap-4 min-w-0">
@@ -244,20 +285,19 @@ export default function DiscoverySection() {
 
                     <div className="h-px w-full bg-white/60" />
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-start">
                       <button
                         type="button"
-                        className="w-fit text-white hover:text-[#F0E74D] transition-colors"
+                        className="w-fit text-white group inline-flex items-center"
                         style={{ fontFamily: "var(--font-saira), sans-serif" }}
                       >
                         {item.readMoreLink}
+                        <ArrowRight
+                          size={22}
+                          className="text-[#F0E74D] opacity-0 group-hover:opacity-100 transition-opacity duration-800"
+                          style={{ marginLeft: "8px" }}
+                        />
                       </button>
-                      <span
-                        className="text-white/70"
-                        style={{ fontFamily: "var(--font-saira), sans-serif" }}
-                      >
-                        {item.date}
-                      </span>
                     </div>
                   </div>
                 </article>
