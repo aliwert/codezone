@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaYoutube } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa6";
+import { MdOutlinePlayCircle } from "react-icons/md";
 
 const musicCards = [
   {
@@ -13,13 +14,13 @@ const musicCards = [
     artist: "SNOPP DOGG",
     song: "ALGORITHM",
     ranking: "Top 10 (3. Sıra)",
-    coverImage: "/image2.png",
+    coverImage: "/snoppdogg.png",
   },
   {
     artist: "CEZA",
     song: "RÜZGAR",
     ranking: "Top 10 (1. Sıra)",
-    coverImage: "/image3.png",
+    coverImage: "/ceza.png",
   },
 ];
 
@@ -29,8 +30,8 @@ export default function FavoritesOfMonths() {
       className="relative w-full bg-[#121214] overflow-hidden"
       style={{
         height: "447px",
-        paddingLeft: "90px",
-        paddingRight: "90px",
+        paddingLeft: "50px",
+        paddingRight: "50px",
       }}
     >
       {/* background vector */}
@@ -97,24 +98,17 @@ export default function FavoritesOfMonths() {
           width: "926px",
           height: "264px",
           top: "89px",
-          left: "520px",
+          left: "550px",
         }}
       >
-        <div className="flex gap-[125px] w-max">
+        <div className="flex gap-[80px] w-max">
           {musicCards.map((card, index) => (
             <div
               key={index}
               className="w-[274px] h-[264px] relative bg-[#2A2A2A] rounded-lg overflow-hidden group cursor-pointer"
             >
               {/* album cover */}
-              <div
-                className="absolute w-[274px] h-[200px] transition-all duration-500 ease-in-out group-hover:left-0 group-hover:top-0 group-hover:rotate-0 "
-                style={{
-                  left: "-55%",
-                  top: "50px",
-                  transform: "rotate(-15deg)",
-                }}
-              >
+              <div className="absolute w-[240px] h-[180px] transition-all duration-500 ease-in-out left-[-55%] top-[50px] -rotate-[15deg] group-hover:left-1/2 group-hover:top-1/2 group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:rotate-0 z-20">
                 <Image
                   src={card.coverImage}
                   alt={`${card.artist} - ${card.song}`}
@@ -126,22 +120,10 @@ export default function FavoritesOfMonths() {
 
                 {/* play button */}
                 <button
-                  className="absolute bg-transparent"
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    top: "50%",
-                    left: "58%",
-                    transform: "translate(-50%, -50%)",
-                  }}
+                  className="absolute inset-0 grid place-items-center bg-transparent"
+                  aria-label="Play"
                 >
-                  <Image
-                    src="/playbutton.svg"
-                    alt="Play button"
-                    width={60}
-                    height={60}
-                    className="w-full h-full"
-                  />
+                  <MdOutlinePlayCircle className="w-[60px] h-[60px]" />
                 </button>
               </div>
 
@@ -149,24 +131,26 @@ export default function FavoritesOfMonths() {
               <div
                 className="absolute text-white transition-opacity duration-500 group-hover:opacity-0 z-10"
                 style={{
-                  top: "30px",
-                  right: "25px",
+                  top: "50px",
+                  right: "40px",
                   fontFamily: "var(--font-saira), sans-serif",
                   textAlign: "right",
                 }}
               >
-                {/* ranking */}
-                <div className="text-xs font-medium mb-4 opacity-90">
+                {/* ranking badge */}
+                <div className="inline-block px-3 py-6 rounded-4xl bg-white/10 text-l font-medium mb-4">
                   {card.ranking}
                 </div>
 
                 {/* artist */}
-                <div className="text-2xl font-bold mb-2 leading-tight">
+                <div className="text-xl font-medium opacity-80 tracking-wide mb-10">
                   {card.artist}
                 </div>
 
                 {/* song */}
-                <div className="text-xl font-bold">{card.song}</div>
+                <div className="text-lg font-bold tracking-wide">
+                  {card.song}
+                </div>
               </div>
             </div>
           ))}
@@ -175,7 +159,7 @@ export default function FavoritesOfMonths() {
 
       {/* progress bar */}
       <div
-        className="absolute bg-gray-800 rounded-full"
+        className="absolute bg-[#2A2A2A] rounded-full"
         style={{
           width: "626px",
           height: "5px",
