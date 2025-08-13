@@ -2,6 +2,7 @@ import TrendsSection from "@/components/TrendsSection";
 import HeroSection from "../components/HeroSection";
 import TwitchHeroSection from "../components/TwitchHeroSection";
 import FavoritesOfMonths from "@/components/FavoritesOfMonths";
+import DiscoverySection from "@/components/DiscoverySection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <TwitchHeroSection />
         <TrendsSection />
         <FavoritesOfMonths />
+        <DiscoverySection />
       </div>
     </div>
   );
