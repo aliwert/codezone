@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 * {
@@ -10,8 +9,14 @@
 body {
   background: #121212;
   color: #ffffff;
-  font-family: "Saira", sans-serif;
   overflow-x: hidden;
+  font-family: var(--font-saira), sans-serif;
+}
+
+/* Ensure font variables are available */
+:root {
+  --font-saira: var(--font-saira);
+  --font-saira-condensed: var(--font-saira-condensed);
 }
 
 .hero-background {

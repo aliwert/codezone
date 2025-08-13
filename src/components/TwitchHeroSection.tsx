@@ -76,7 +76,7 @@ export default function TwitchHeroSection() {
                   <h2
                     className="text-white uppercase"
                     style={{
-                      fontFamily: "Saira Condensed",
+                      fontFamily: "var(--font-saira-condensed), sans-serif",
                       fontWeight: 300,
                       fontSize: "68.24px",
                       lineHeight: "89%",
@@ -88,7 +88,7 @@ export default function TwitchHeroSection() {
                   <h2
                     className="text-[#F0E74D] uppercase"
                     style={{
-                      fontFamily: "Saira Condensed",
+                      fontFamily: "var(--font-saira-condensed), sans-serif",
                       fontWeight: 700,
                       fontSize: "68.24px",
                       lineHeight: "89%",
@@ -100,7 +100,7 @@ export default function TwitchHeroSection() {
                   <p
                     className="text-white mt-2"
                     style={{
-                      fontFamily: "Saira",
+                      fontFamily: "var(--font-saira), sans-serif",
                       fontWeight: 700,
                       fontSize: "16px",
                       lineHeight: "104%",

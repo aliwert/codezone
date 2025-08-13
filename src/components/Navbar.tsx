@@ -55,7 +55,7 @@ export default function Navbar() {
             style={{
               width: "73px",
               height: "14px",
-              fontFamily: "Saira, sans-serif",
+              fontFamily: "var(--font-saira), sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               lineHeight: "100%",
@@ -73,7 +73,7 @@ export default function Navbar() {
             style={{
               width: "73px",
               height: "14px",
-              fontFamily: "Saira, sans-serif",
+              fontFamily: "var(--font-saira), sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               lineHeight: "100%",
@@ -91,7 +91,7 @@ export default function Navbar() {
             style={{
               width: "73px",
               height: "14px",
-              fontFamily: "Saira, sans-serif",
+              fontFamily: "var(--font-saira), sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               lineHeight: "100%",
@@ -109,7 +109,7 @@ export default function Navbar() {
             style={{
               width: "73px",
               height: "14px",
-              fontFamily: "Saira, sans-serif",
+              fontFamily: "var(--font-saira), sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               lineHeight: "100%",
@@ -127,7 +127,7 @@ export default function Navbar() {
             style={{
               width: "73px",
               height: "14px",
-              fontFamily: "Saira, sans-serif",
+              fontFamily: "var(--font-saira), sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               lineHeight: "100%",
@@ -152,7 +152,10 @@ export default function Navbar() {
           <Image src="/search.svg" alt="Search" width={24} height={24} />
         </div>
         {/* login button */}
-        <div className="absolute top-6 right-[105px] w-[100px] h-8 font-saira font-bold text-sm leading-none text-black bg-white border-none cursor-pointer flex items-center justify-center text-center">
+        <div
+          className="absolute top-6 right-[105px] w-[100px] h-8 font-bold text-sm leading-none text-black bg-white border-none cursor-pointer flex items-center justify-center text-center"
+          style={{ fontFamily: "var(--font-saira), sans-serif" }}
+        >
           <button>GİRİŞ YAP</button>
         </div>
       </div>

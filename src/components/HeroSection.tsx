@@ -55,7 +55,7 @@ export default function HeroSection() {
             <h1
               className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-bold"
               style={{
-                fontFamily: "Saira Condensed",
+                fontFamily: "var(--font-saira-condensed), sans-serif",
                 fontWeight: 700,
                 fontSize: "60.1px",
                 lineHeight: "110.00000000000001%",
@@ -83,7 +83,10 @@ export default function HeroSection() {
               <Image src="/devaminioku.svg" alt="Devamını Oku" fill priority />
               <span
                 className="absolute left-[16px] top-[6px] text-[14px] font-bold"
-                style={{ fontFamily: "Saira, sans-serif", color: "#121212" }}
+                style={{
+                  fontFamily: "var(--font-saira), sans-serif",
+                  color: "#121212",
+                }}
               >
                 Devamını Oku
               </span>
