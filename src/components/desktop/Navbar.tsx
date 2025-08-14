@@ -7,11 +7,13 @@ export default function Navbar() {
       style={{
         width: "1440px",
         height: "80px",
-        background: "#1212121A",
+        background: "#121212",
         borderBottom: "1px solid #2A2A2A",
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         opacity: 1,
+        position: "relative",
+        zIndex: 50,
       }}
     >
       <div

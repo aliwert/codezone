@@ -13,10 +13,13 @@ body {
   font-family: var(--font-saira), sans-serif;
 }
 
-/* Ensure font variables are available */
-:root {
-  --font-saira: var(--font-saira);
-  --font-saira-condensed: var(--font-saira-condensed);
+/* Global font utilities backed by next/font variables */
+.font-saira {
+  font-family: var(--font-saira), sans-serif;
+}
+
+.font-saira-condensed {
+  font-family: var(--font-saira-condensed), var(--font-saira), sans-serif;
 }
 
 .hero-background {
