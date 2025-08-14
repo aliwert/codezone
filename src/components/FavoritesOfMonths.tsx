@@ -10,6 +10,8 @@ const musicCards = [
     ranking: "Top 10 (2. Sıra)",
     coverImage: "/50cent.png",
     vectorImage: "/yellow-vector.svg",
+    artistMarginRight: "20px",
+    songMarginRight: "22px",
   },
   {
     artist: "SNOPP DOGG",
@@ -17,6 +19,8 @@ const musicCards = [
     ranking: "Top 10 (3. Sıra)",
     coverImage: "/snoppdogg.png",
     vectorImage: "/yellowvector2.svg",
+    artistMarginRight: "2px",
+    songMarginRight: "0px",
   },
   {
     artist: "CEZA",
@@ -24,6 +28,8 @@ const musicCards = [
     ranking: "Top 10 (1. Sıra)",
     coverImage: "/ceza.png",
     vectorImage: "/yellowvector3.svg",
+    artistMarginRight: "10px",
+    songMarginRight: "1px",
   },
 ];
 
@@ -167,11 +173,17 @@ export default function FavoritesOfMonths() {
                     className="text-xl text-white"
                     style={{
                       marginTop: "15px",
+                      marginRight: (card as any).artistMarginRight || 0,
                     }}
                   >
                     {card.artist}
                   </div>
-                  <div className="text-lg font-extrabold">{card.song}</div>
+                  <div
+                    className="text-lg font-extrabold"
+                    style={{ marginRight: (card as any).songMarginRight || 0 }}
+                  >
+                    {card.song}
+                  </div>
                 </div>
               </div>
               <div
