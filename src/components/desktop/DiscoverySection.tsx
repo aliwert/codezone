@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import {
-  FiAlignJustify,
-  FiSend,
-  FiArrowRight as ArrowRight,
-} from "react-icons/fi";
+import { FiAlignJustify, FiArrowRight as ArrowRight } from "react-icons/fi";
 import { BiGridVertical } from "react-icons/bi";
 import { FaFacebookF, FaSpotify } from "react-icons/fa6";
 import { FaTwitter, FaDiscord, FaYoutube } from "react-icons/fa";

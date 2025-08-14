@@ -3,7 +3,17 @@ import { FaYoutube } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa6";
 import { MdOutlinePlayCircle } from "react-icons/md";
 
-const musicCards = [
+type MusicCard = {
+  artist: string;
+  song: string;
+  ranking: string;
+  coverImage: string;
+  vectorImage: string;
+  artistMarginRight?: string | number;
+  songMarginRight?: string | number;
+};
+
+const musicCards: MusicCard[] = [
   {
     artist: "50 CENT",
     song: "CURTIS",
@@ -173,14 +183,14 @@ export default function FavoritesOfMonths() {
                     className="text-xl text-white"
                     style={{
                       marginTop: "15px",
-                      marginRight: (card as any).artistMarginRight || 0,
+                      marginRight: card.artistMarginRight ?? 0,
                     }}
                   >
                     {card.artist}
                   </div>
                   <div
                     className="text-lg font-extrabold"
-                    style={{ marginRight: (card as any).songMarginRight || 0 }}
+                    style={{ marginRight: card.songMarginRight ?? 0 }}
                   >
                     {card.song}
                   </div>

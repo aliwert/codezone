@@ -87,7 +87,7 @@ export default function TrendsSection() {
 
       {/* articles Grid */}
       <div className="grid grid-cols-3 gap-x-[10px] gap-y-[20px] mb-[117px]">
-        {articles.map((article, index) => (
+        {articles.map((article) => (
           <article
             key={article.id}
             className="w-[420px] h-[200px] bg-transparent relative transition-opacity"
