@@ -35,7 +35,7 @@ export default function ClipsSection() {
         width={600}
         height={600}
         className="pointer-events-none select-none absolute"
-        style={{ right: 0, top: 0, zIndex: 0 }}
+        style={{ right: 0, top: -10, zIndex: 0 }}
       />
 
       {/* header */}
@@ -49,7 +49,8 @@ export default function ClipsSection() {
             fontFamily: "var(--font-saira-condensed), sans-serif",
             fontSize: "60px",
             letterSpacing: "-1px",
-            fontWeight: "bold",
+            fontWeight: 700,
+            lineHeight: "89%",
             marginTop: "50px",
           }}
         >
@@ -58,20 +59,20 @@ export default function ClipsSection() {
         <Image
           src="/clips.svg"
           alt="clips icon"
-          width={50}
-          height={50}
-          style={{ marginTop: "50px" }}
+          width={63}
+          height={37}
+          style={{ marginTop: "50px", marginLeft: "20px" }}
         />
       </div>
 
       {/* clips */}
       <div
         className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6"
-        style={{ marginLeft: "70px", marginRight: "70px" }}
+        style={{ marginLeft: "70px", marginRight: "70px", marginTop: "50px" }}
       >
         {clips.map((c, idx) => (
           <article key={idx} className="flex flex-col">
-            <div className="relative w-full aspect-[414/245] overflow-hidden rounded-md bg-black/20">
+            <div className="relative w-full aspect-[414/245] overflow-hidden  bg-black/20">
               <Image src={c.src} alt={c.alt} fill className="object-cover" />
               {/* play button */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -84,12 +85,13 @@ export default function ClipsSection() {
               </div>
             </div>
             <p
-              className="mt-6 text-white"
+              className="text-[#FFFFFF]"
               style={{
                 fontFamily: "var(--font-saira-condensed), sans-serif",
                 fontSize: "20px",
                 fontWeight: 700,
-                lineHeight: "28px",
+                lineHeight: "104%",
+                letterSpacing: "0",
                 marginLeft: "20px",
                 marginRight: "20px",
                 marginTop: "30px",

@@ -155,7 +155,7 @@ export default function Navbar() {
         </div>
         {/* login button */}
         <div
-          className="absolute top-6 right-[105px] w-[100px] h-8 font-bold text-sm leading-none text-black bg-white border-none cursor-pointer flex items-center justify-center text-center"
+          className="absolute top-5 right-[85px] w-[120px] h-[40px] font-bold text-sm leading-none text-black bg-white border-none cursor-pointer flex items-center justify-center text-center"
           style={{ fontFamily: "var(--font-saira), sans-serif" }}
         >
           <button>GİRİŞ YAP</button>

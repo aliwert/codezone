@@ -48,10 +48,10 @@ export default function BlogSection() {
           src="/metal-texture-with-dust-scratches-cracks-textured-backgrounds (1) 1.png"
           alt="Metal texture background"
           fill
-          className="object-cover opacity-100"
+          className="object-cover opacity-90"
           priority
           style={{
-            background: "rgba(240, 231, 77, 1)",
+            background: "#FCFF32",
           }}
         />
         {/* main background svg  */}
@@ -116,7 +116,7 @@ export default function BlogSection() {
 
         {/* page title */}
         <h1
-          className="font-saira-condensed text-[50px] leading-none tracking-wide mb-24 text-black"
+          className="font-saira-condensed text-[50px] leading-none tracking-wide mb-24 text-[#121212]"
           style={{
             marginTop: "30px",
             marginLeft: "70px",
@@ -146,8 +146,14 @@ export default function BlogSection() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-20 left-12">
-                <h2 className="text-4xl font-semibold tracking-wide">
+              <div className="absolute bottom-8 left-12">
+                <h2
+                  className="text-4xl font-semibold tracking-wide"
+                  style={{
+                    fontWeight: 700,
+                    fontFamily: "var(--font-saira-condensed), sans-serif",
+                  }}
+                >
                   LOREM FT - IPSUM
                 </h2>
               </div>
@@ -170,9 +176,13 @@ export default function BlogSection() {
               style={{ marginLeft: "130px", marginTop: "20px" }}
             >
               <p
-                className="max-w-[524px] text-lg text-black"
+                className="max-w-[524px] text-black"
                 style={{
                   fontWeight: 700,
+                  fontSize: "25px",
+                  letterSpacing: 0,
+                  lineHeight: "104%",
+                  fontFamily: "var(--font-saira-condensed), sans-serif",
                 }}
               >
                 LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET
@@ -205,7 +215,7 @@ export default function BlogSection() {
           <aside
             className="flex flex-col gap-6 md:gap-8"
             style={{
-              marginLeft: "-70px",
+              marginLeft: "-90px",
               marginTop: "15px",
             }}
           >
@@ -228,6 +238,7 @@ export default function BlogSection() {
                     fontWeight: 700,
                     fontSize: "25px",
                     width: "350px",
+                    letterSpacing: 0,
                   }}
                 >
                   {a.title}

@@ -145,14 +145,14 @@ export default function BlogDiscoverySection() {
 
           {/* right icons */}
           <div
-            className="flex items-center gap-3 text-white"
+            className="flex items-center gap-5 text-white"
             style={{
               marginTop: "40px",
               marginRight: "70px",
             }}
           >
             <button type="button" className="p-2 rounded-md" title="Ara">
-              <Image src="/search.svg" alt="Search" width={30} height={18} />
+              <Image src="/search.svg" alt="Search" width={25} height={23} />
             </button>
             <button
               type="button"
@@ -173,13 +173,13 @@ export default function BlogDiscoverySection() {
 
         {/* categories */}
         <div
-          className="hidden md:flex flex-wrap gap-8"
-          style={{ marginLeft: "70px", marginTop: "30px" }}
+          className="hidden md:flex flex-wrap gap-4"
+          style={{ marginLeft: "70px", marginTop: "35px" }}
         >
           {categories.map((c, idx) => (
             <button
               key={idx}
-              className={`h-10 px-4 border ${
+              className={`h-10  border ${
                 c.active
                   ? "bg-[#F0E74D] text-black border-[#121212] font-bold"
                   : "bg-transparent text-white border-white"
@@ -187,7 +187,7 @@ export default function BlogDiscoverySection() {
               style={{
                 fontFamily: "var(--font-saira), sans-serif",
                 width: "auto",
-                padding: "0 12px",
+                padding: "0 20px",
               }}
             >
               {c.name}
@@ -215,7 +215,7 @@ export default function BlogDiscoverySection() {
                 height={33}
                 className="rounded object-cover"
                 style={{
-                  marginTop: "40px",
+                  marginTop: "50px",
                   zIndex: 10,
                 }}
               />
@@ -223,7 +223,7 @@ export default function BlogDiscoverySection() {
                 className="text-white"
                 style={{
                   fontFamily: "var(--font-saira), sans-serif",
-                  marginTop: "40px",
+                  marginTop: "50px",
                   zIndex: 10,
                 }}
               >
@@ -246,10 +246,11 @@ export default function BlogDiscoverySection() {
             </div>
 
             <div
-              className="text-[#8a8a8a] mt-4"
+              className="text-[#4A4A4A] mt-4"
               style={{
                 fontFamily: "var(--font-saira), sans-serif",
                 marginTop: "30px",
+                fontWeight: 400,
               }}
             >
               {post.date}
@@ -261,6 +262,8 @@ export default function BlogDiscoverySection() {
                 fontFamily: "var(--font-saira-condensed), sans-serif",
                 fontSize: "20px",
                 marginTop: "20px",
+                lineHeight: "104%",
+                fontWeight: 700,
                 zIndex: 20,
               }}
             >
@@ -268,7 +271,7 @@ export default function BlogDiscoverySection() {
             </h3>
 
             <div
-              className="h-px w-full bg-white/60 mt-4"
+              className="h-px w-full bg-[#3B3B3B] mt-4"
               style={{ marginTop: "20px" }}
             />
             <button
@@ -277,6 +280,8 @@ export default function BlogDiscoverySection() {
               style={{
                 fontFamily: "var(--font-saira), sans-serif",
                 marginTop: "20px",
+                fontWeight: 400,
+                fontSize: "16px",
               }}
             >
               Daha Fazla Oku

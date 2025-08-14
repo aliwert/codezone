@@ -37,8 +37,8 @@ export default function BlogFooter() {
               <Image
                 src="/rapkology.svg"
                 alt="Rapkology"
-                width={200}
-                height={60}
+                width={240}
+                height={72}
                 priority
               />
             </div>
@@ -59,8 +59,11 @@ export default function BlogFooter() {
             </h2>
 
             {/* email row */}
-            <div className="mt-8">
-              <div className="flex items-center justify-between">
+            <div>
+              <div
+                className="flex items-center justify-between"
+                style={{ marginTop: "28px", maxWidth: "350px" }}
+              >
                 <label
                   htmlFor="newsletter-email"
                   className="text-white"
@@ -68,13 +71,14 @@ export default function BlogFooter() {
                     fontFamily: "var(--font-saira), sans-serif",
                     fontSize: "14px",
                     letterSpacing: "0.02em",
+                    marginLeft: "16px",
                   }}
                 >
                   EMAIL
                 </label>
                 <button
                   type="button"
-                  className="text-[#F0E74D] inline-flex items-center gap-2 p-1"
+                  className="text-[#F0E74D] inline-flex items-start gap-2 p-1"
                   title="Gönder"
                   style={{
                     fontFamily: "var(--font-saira), sans-serif",
@@ -88,12 +92,13 @@ export default function BlogFooter() {
                 </button>
               </div>
 
-              {/* input */}
+              {/* input below */}
               <input
                 id="newsletter-email"
                 type="email"
                 aria-label="Email"
                 className="mt-2 w-full bg-transparent border-0 border-b border-white/20 rounded-none px-0 pb-2 text-white placeholder:text-white/50 focus:outline-none"
+                style={{ maxWidth: "350px" }}
                 placeholder=""
               />
             </div>
@@ -103,7 +108,7 @@ export default function BlogFooter() {
           <div
             className="col-span-12 md:col-span-5 flex flex-col gap-6 items-stretch"
             style={{
-              marginTop: "80px",
+              marginTop: "100px",
             }}
           >
             {/* socials */}
@@ -121,11 +126,11 @@ export default function BlogFooter() {
                 <a
                   key={item}
                   href="#"
-                  className="text-white transition-colors hover:text-[#F0E74D] whitespace-nowrap"
+                  className="text-[#FFFFFF] transition-colors hover:text-[#F0E74D] whitespace-nowrap"
                   style={{
                     fontFamily: "var(--font-saira), sans-serif",
                     fontSize: "14px",
-                    letterSpacing: "0.02em",
+                    letterSpacing: "0%",
                     fontWeight: 400,
                   }}
                 >
