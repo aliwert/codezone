@@ -14,16 +14,6 @@ type SideArticle = {
 export default function BlogSection() {
   const sideArticles: SideArticle[] = [
     {
-      image: "/kesfet1.png",
-      title:
-        "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
-    },
-    {
-      image: "/kesfet2.png",
-      title:
-        "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
-    },
-    {
       image: "/kesfet3.png",
       title:
         "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
@@ -33,10 +23,20 @@ export default function BlogSection() {
       title:
         "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
     },
+    {
+      image: "/kesfet5.png",
+      title:
+        "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
+    },
+    {
+      image: "/kesfet2.png",
+      title:
+        "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES ...",
+    },
   ];
 
   return (
-    <section className="relative w-full min-h-[80vh] overflow-hidden bg-[#0B0B0B] text-white">
+    <section className="relative w-full min-h-[90vh] overflow-hidden bg-[#0B0B0B] text-white">
       <div className="w-full flex justify-center relative">
         <Navbar />
       </div>
@@ -48,7 +48,7 @@ export default function BlogSection() {
           src="/metal-texture-with-dust-scratches-cracks-textured-backgrounds (1) 1.png"
           alt="Metal texture background"
           fill
-          className="object-cover opacity-80"
+          className="object-cover opacity-100"
           priority
           style={{
             background: "rgba(240, 231, 77, 1)",
@@ -56,7 +56,7 @@ export default function BlogSection() {
         />
         {/* main background svg  */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="relative w-[1248px] h-[1102px] mx-auto -top-[90px]">
+          <div className="relative w-[1100px] h-[1250px] mx-auto -top-[120px] left-[380px]">
             <Image
               src="/blogmainbackground.svg"
               alt="Blog background"
@@ -67,7 +67,7 @@ export default function BlogSection() {
           </div>
         </div>
         {/* bottom decorative vectors */}
-        <div className="absolute left-0 bottom-0 w-[876px] h-[227px]">
+        <div className="absolute left-0 bottom-[-80px] w-[876px] h-[227px]">
           <Image
             src="/blogvector1.svg"
             alt="Left vector"
@@ -75,7 +75,7 @@ export default function BlogSection() {
             className="object-contain"
           />
         </div>
-        <div className="absolute right-0 bottom-0 w-[878px] h-[249px]">
+        <div className="absolute right-0 bottom-[-80px] w-[878px] h-[249px]">
           <Image
             src="/blogvector2.svg"
             alt="Right vector"
@@ -92,7 +92,7 @@ export default function BlogSection() {
           className="flex font-saira text-black uppercase text-[14px] leading-none tracking-[0.02em] gap-3"
           style={{
             marginTop: "65px",
-            marginLeft: "90px",
+            marginLeft: "70px",
             fontWeight: 400,
             fontSize: "14px",
           }}
@@ -119,7 +119,7 @@ export default function BlogSection() {
           className="font-saira-condensed text-[50px] leading-none tracking-wide mb-24 text-black"
           style={{
             marginTop: "30px",
-            marginLeft: "90px",
+            marginLeft: "70px",
             fontWeight: 700,
             fontSize: "60px",
             fontStyle: "bold",
@@ -135,7 +135,7 @@ export default function BlogSection() {
             <div
               className="relative w-[738px] max-w-full h-[431px] overflow-hidden"
               style={{
-                marginLeft: "90px",
+                marginLeft: "70px",
                 marginTop: "15px",
               }}
             >
@@ -169,7 +169,12 @@ export default function BlogSection() {
               className="flex items-center gap-6"
               style={{ marginLeft: "130px", marginTop: "20px" }}
             >
-              <p className="max-w-[524px] text-lg text-black m-0">
+              <p
+                className="max-w-[524px] text-lg text-black  text-bold"
+                style={{
+                  fontWeight: 700,
+                }}
+              >
                 LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET
                 MASSA MI. MAURIS NEC LEO NON LIBERO SODALES LOBORTIS. QUISQUE A
                 NEQUE PRETI ...
@@ -197,13 +202,19 @@ export default function BlogSection() {
           </div>
 
           {/* sidebar */}
-          <aside className="flex flex-col gap-6">
+          <aside
+            className="flex flex-col gap-6 md:gap-8"
+            style={{
+              marginLeft: "-70px",
+              marginTop: "15px",
+            }}
+          >
             {sideArticles.map((a, idx) => (
               <article
                 key={`${a.title}-${idx}`}
                 className="flex items-start gap-5"
               >
-                <div className="relative w-[175px] h-[105px] flex-shrink-0 overflow-hidden rounded-sm">
+                <div className="relative w-[150px] h-[100px] flex-shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/10">
                   <Image
                     src={a.image}
                     alt="Article"
@@ -211,7 +222,14 @@ export default function BlogSection() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-xl leading-6 font-semibold text-white/90">
+                <h3
+                  className="font-saira-condensed text-black leading-6 tracking-[0.02em] font-extrabold"
+                  style={{
+                    fontWeight: 700,
+                    fontSize: "25px",
+                    width: "350px",
+                  }}
+                >
                   {a.title}
                 </h3>
               </article>
