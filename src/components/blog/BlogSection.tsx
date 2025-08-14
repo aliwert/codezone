@@ -170,7 +170,7 @@ export default function BlogSection() {
               style={{ marginLeft: "130px", marginTop: "20px" }}
             >
               <p
-                className="max-w-[524px] text-lg text-black  text-bold"
+                className="max-w-[524px] text-lg text-black"
                 style={{
                   fontWeight: 700,
                 }}

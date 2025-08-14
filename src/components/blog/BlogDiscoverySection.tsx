@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { FiAlignJustify } from "react-icons/fi";
+import { FiAlignJustify, FiArrowRight as ArrowRight } from "react-icons/fi";
 import { BiGridVertical } from "react-icons/bi";
 
 type Category = { name: string; active?: boolean };
@@ -102,37 +102,55 @@ const posts: Post[] = [
 
 export default function BlogDiscoverySection() {
   return (
-    <section className="bg-[#121214]">
+    <section className="relative bg-[#121214]">
+      {/* diamond relative position */}
+      <Image
+        src="/diamond.svg"
+        alt="diamond decorative"
+        width={500}
+        height={500}
+        className="pointer-events-none select-none absolute"
+        style={{ left: 0, top: 20, zIndex: 0 }}
+      />
+
       {/* header */}
-      <div className="mb-8">
+      <div className="relative z-10 mb-8">
         <div className="flex items-center justify-between">
-          {/* title + diamond */}
-          <div className="relative flex flex-col items-start">
+          {/* title + compass */}
+          <div
+            className="relative flex items-center gap-4"
+            style={{ marginLeft: "70px", marginTop: "40px" }}
+          >
             <h2
               className="text-white uppercase tracking-tight"
               style={{
                 fontFamily: "var(--font-saira-condensed), sans-serif",
-                fontSize: "48px",
+                fontSize: "60px",
                 letterSpacing: "-1px",
-                marginLeft: "70px",
-                fontWeight: 400,
-                marginTop: "40px",
+                fontWeight: "bold",
               }}
             >
               KEŞFET
             </h2>
             <Image
-              src="/diamond.svg"
-              alt="diamond"
-              width={36}
-              height={36}
-              className="pointer-events-none select-none absolute"
-              style={{ left: "64px", top: "54px", zIndex: 0 }}
+              src="/compass.svg"
+              alt="accent"
+              width={50}
+              height={50}
+              style={{
+                marginLeft: "15px",
+              }}
             />
           </div>
 
           {/* right icons */}
-          <div className="flex items-center gap-3 text-white">
+          <div
+            className="flex items-center gap-3 text-white"
+            style={{
+              marginTop: "40px",
+              marginRight: "70px",
+            }}
+          >
             <button type="button" className="p-2 rounded-md" title="Ara">
               <Image src="/search.svg" alt="Search" width={30} height={18} />
             </button>
@@ -163,7 +181,7 @@ export default function BlogDiscoverySection() {
               key={idx}
               className={`h-10 px-4 border ${
                 c.active
-                  ? "bg-[#F0E74D] text-black border-[#121212]"
+                  ? "bg-[#F0E74D] text-black border-[#121212] font-bold"
                   : "bg-transparent text-white border-white"
               }`}
               style={{
@@ -198,6 +216,7 @@ export default function BlogDiscoverySection() {
                 className="rounded object-cover"
                 style={{
                   marginTop: "40px",
+                  zIndex: 10,
                 }}
               />
               <span
@@ -205,6 +224,7 @@ export default function BlogDiscoverySection() {
                 style={{
                   fontFamily: "var(--font-saira), sans-serif",
                   marginTop: "40px",
+                  zIndex: 10,
                 }}
               >
                 {post.authorName}
@@ -241,6 +261,7 @@ export default function BlogDiscoverySection() {
                 fontFamily: "var(--font-saira-condensed), sans-serif",
                 fontSize: "20px",
                 marginTop: "20px",
+                zIndex: 20,
               }}
             >
               {post.title}
@@ -252,27 +273,68 @@ export default function BlogDiscoverySection() {
             />
             <button
               type="button"
-              className="text-white w-fit mt-3"
+              className="text-white w-fit mt-3 group inline-flex items-center"
               style={{
                 fontFamily: "var(--font-saira), sans-serif",
                 marginTop: "20px",
               }}
             >
               Daha Fazla Oku
+              <ArrowRight
+                style={{
+                  marginLeft: "10px",
+                }}
+                size={22}
+                className="text-[#F0E74D] opacity-0 translate-x-0 ml-2 transition-all duration-500 group-hover:opacity-100 "
+              />
             </button>
           </article>
         ))}
       </div>
 
       {/* daha fazla gor */}
-      <div className="flex justify-center mt-12">
-        <button
-          type="button"
-          className="h-[57px] px-8 border border-white/60 text-white hover:bg-white/10"
-          style={{ fontFamily: "var(--font-saira), sans-serif" }}
+      <div
+        className="flex justify-center"
+        style={{
+          marginTop: "40px",
+        }}
+      >
+        <div
+          className="relative inline-block"
+          style={{ transform: "skewX(10deg)" }}
         >
-          Daha Fazla Gör
-        </button>
+          {/* black shadow plate */}
+          <span
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              transform: "translate(10px, 8px)",
+              background: "#0B0B0B",
+              borderRadius: "2px",
+            }}
+          />
+
+          {/* white label button */}
+          <button
+            type="button"
+            className="relative z-[1] h-[57px] px-8 text-black"
+            style={{
+              fontFamily: "var(--font-saira), sans-serif",
+              width: "220px",
+              background: "white",
+              border: "1px solid white",
+              borderRadius: "2px",
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 700,
+              }}
+            >
+              Daha Fazla Gör
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   );
