@@ -119,7 +119,7 @@ export default function BlogDiscoverySection() {
           {/* title + compass */}
           <div
             className="relative flex items-center gap-4"
-            style={{ marginLeft: "70px", marginTop: "40px" }}
+            style={{ marginLeft: "70px", marginTop: "60px" }}
           >
             <h2
               className="text-white uppercase tracking-tight"
