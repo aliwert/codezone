@@ -104,7 +104,12 @@ export default function FavoritesOfMonths() {
           left: "550px",
         }}
       >
-        <div className="flex gap-[80px] w-max">
+        <div
+          className="flex gap-[60px] w-max"
+          style={{
+            marginLeft: "50px",
+          }}
+        >
           {musicCards.map((card, index) => (
             <div
               key={index}
@@ -141,13 +146,31 @@ export default function FavoritesOfMonths() {
                 }}
               >
                 {/* ranking */}
-                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/10 text-sm font-medium whitespace-nowrap">
+                <div
+                  className="inline-flex items-center px-2 py-1.5 rounded-full bg-white/10 text-sm font-medium whitespace-nowrap"
+                  style={{
+                    width: "120px",
+                    height: "23px",
+                    opacity: 1,
+                    paddingTop: "7px",
+                    paddingRight: "16.06px",
+                    paddingBottom: "10.55px",
+                    paddingLeft: "14.06px",
+                  }}
+                >
                   {card.ranking}
                 </div>
 
                 {/* artist + song */}
                 <div className="flex flex-col items-center">
-                  <div className="text-xl text-white">{card.artist}</div>
+                  <div
+                    className="text-xl text-white"
+                    style={{
+                      marginTop: "15px",
+                    }}
+                  >
+                    {card.artist}
+                  </div>
                   <div className="text-lg font-extrabold">{card.song}</div>
                 </div>
               </div>

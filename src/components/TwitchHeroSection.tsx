@@ -206,18 +206,18 @@ export default function TwitchHeroSection() {
       </div>
 
       {/* konser.jpg */}
-      <div className="absolute bottom-[250px] h-[190px] z-5 w-full max-w-[1350px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[280px] h-[190px] z-5 w-full max-w-[1350px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/konser.jpg"
           alt="Concert scene"
           fill
-          className="object-cover opacity-40"
-          style={{ filter: "grayscale(0.7) contrast(0.8) brightness(0.6)" }}
+          className="object-cover opacity-50"
+          style={{ filter: "grayscale(0.9) contrast(0.5) brightness(0.3)" }}
         />
       </div>
 
       {/* Vector-2.svg */}
-      <div className="absolute bottom-[170px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[190px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/Vector3.svg"
           alt="segmented bottom edge"
