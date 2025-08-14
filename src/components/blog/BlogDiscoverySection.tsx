@@ -294,45 +294,37 @@ export default function BlogDiscoverySection() {
 
       {/* daha fazla gor */}
       <div
-        className="flex justify-center"
+        className="relative z-10 flex justify-center"
         style={{
           marginTop: "40px",
         }}
       >
-        <div
-          className="relative inline-block"
-          style={{ transform: "skewX(10deg)" }}
-        >
-          {/* black shadow plate */}
+        <div className="relative inline-block">
           <span
             aria-hidden
             className="absolute inset-0"
             style={{
-              transform: "translate(10px, 8px)",
+              transform: "translate(-8px, 6px)",
               background: "#0B0B0B",
               borderRadius: "2px",
+              clipPath: "polygon(0 0, 100% 0, 93% 100%, 6% 95%);",
             }}
           />
 
-          {/* white label button */}
           <button
             type="button"
-            className="relative z-[1] h-[57px] px-8 text-black"
+            className="relative z-[1] h-[49px] px-8 text-black font-bold"
             style={{
               fontFamily: "var(--font-saira), sans-serif",
-              width: "220px",
+              width: "200px",
               background: "white",
               border: "1px solid white",
               borderRadius: "2px",
+              cursor: "pointer",
+              clipPath: "polygon(0 0, 100% 0, 93% 100%, 6% 95%);",
             }}
           >
-            <span
-              style={{
-                fontWeight: 700,
-              }}
-            >
-              Daha Fazla Gör
-            </span>
+            Daha Fazla Gör
           </button>
         </div>
       </div>

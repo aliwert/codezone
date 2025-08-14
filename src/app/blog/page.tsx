@@ -1,5 +1,6 @@
 import BlogSection from "../../components/blog/BlogSection";
 import BlogDiscoverySection from "../../components/blog/BlogDiscoverySection";
+import ClipsSection from "@/components/blog/ClipsSection";
 
 export default function Page() {
   return (
@@ -7,6 +8,7 @@ export default function Page() {
       <div className="w-full max-w-[1440px] bg-zinc-800 min-h-screen">
         <BlogSection />
         <BlogDiscoverySection />
+        <ClipsSection />
       </div>
     </div>
   );
