@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Navbar from "../desktop/Navbar";
 import Link from "next/link";
+import { GoChevronRight } from "react-icons/go";
 
 type SideArticle = {
   image: string;
@@ -11,12 +12,6 @@ type SideArticle = {
 };
 
 export default function BlogSection() {
-  const breadcrumb = [
-    { label: "ANA SAYFA", href: "#" },
-    { label: "BLOG", href: "#" },
-    { label: "LOREM IPSUM DOLOR ... AMET", href: "#" },
-  ];
-
   const sideArticles: SideArticle[] = [
     {
       image: "/kesfet1.png",
@@ -92,38 +87,42 @@ export default function BlogSection() {
 
       {/* content wrapper  */}
       <div className="relative z-10 w-[1248px] max-w-full mx-auto px-6 pt-10 pb-20">
-        {/* breadcrumb */}
-        <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-5 text-sm text-black font-saira">
-            {breadcrumb.map((b, i) => (
-              <li
-                key={b.label}
-                className="flex items-center gap-5"
-                style={{
-                  marginTop: "50px",
-                  marginLeft: "90px",
-                }}
-              >
-                <Link
-                  href={b.href || "#"}
-                  className="hover:text-white/95 transition-colors"
-                >
-                  {b.label}
-                </Link>
-                {i < breadcrumb.length - 1 && (
-                  <Image src="/right-arrow.svg" width={5} height={9} alt="/" />
-                )}
-              </li>
-            ))}
-          </ol>
-        </nav>
+        {/* top breadcrumb */}
+        <div
+          className="flex font-saira text-black uppercase text-[14px] leading-none tracking-[0.02em] gap-3"
+          style={{
+            marginTop: "65px",
+            marginLeft: "90px",
+            fontWeight: 400,
+            fontSize: "14px",
+          }}
+        >
+          <Link href="#" className="hover:opacity-90">
+            ANA SAYFA
+          </Link>
+          <span className="">
+            <GoChevronRight />
+          </span>
+          <Link href="#" className="hover:opacity-90">
+            BLOG
+          </Link>
+          <span className="">
+            <GoChevronRight />
+          </span>
+          <Link href="#" className="hover:opacity-90">
+            LOREM IPSUM DOLOR ... AMET
+          </Link>
+        </div>
 
         {/* page title */}
         <h1
           className="font-saira-condensed text-[50px] leading-none tracking-wide mb-24 text-black"
           style={{
-            marginTop: "50px",
+            marginTop: "30px",
             marginLeft: "90px",
+            fontWeight: 700,
+            fontSize: "60px",
+            fontStyle: "bold",
           }}
         >
           BLOG
