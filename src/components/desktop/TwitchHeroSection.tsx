@@ -4,7 +4,7 @@ export default function TwitchHeroSection() {
   return (
     <section
       className="relative w-full h-[80vh] bg-zinc-800 overflow-hidden Saira"
-      style={{ marginBottom: "-150px" }}
+      style={{ marginBottom: "-150px", marginTop: "50px" }}
     >
       {/* background container */}
       <div className="absolute inset-0 z-0">

@@ -5,7 +5,7 @@ import { TfiArrowLeft, TfiArrowRight } from "react-icons/tfi";
 export default function HeroSection() {
   return (
     <section
-      className="relative mx-auto overflow-hidden bg-zinc-800"
+      className="relative mx-auto overflow-hidden bg-[#131312]"
       style={{
         width: "1440px",
         height: "703px",
@@ -17,7 +17,7 @@ export default function HeroSection() {
         <Navbar />
       </div>
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <Image
           src="/hip-hop-singer-stage-during-concertative-ai 2.png"
           alt="Hip hop artist on stage"
@@ -30,11 +30,8 @@ export default function HeroSection() {
           priority
         />
         {/* right darkening */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/100" />
-        {/* top gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent pointer-events-none" />
-        {/* bottom gradient */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#131312]" />
+
         {/* texture overlay */}
         <Image
           src="/metal-texture-with-dust-scratches-cracks-textured-backgrounds (1) 1.png"
@@ -72,7 +69,16 @@ export default function HeroSection() {
               HABERLERİNİ TAKİP ET
             </h1>
 
-            <p className="mb-6 max-w-[420px] text-[15px] leading-[1.6] text-white">
+            <p
+              className="mb-6 max-w-[450px] text-white"
+              style={{
+                fontWeight: 400,
+                fontFamily: "var(--font-saira), sans-serif",
+                fontSize: "16px",
+                lineHeight: "120%",
+                letterSpacing: "1.5%",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -137,7 +143,6 @@ export default function HeroSection() {
           className="w-full h-auto"
         />
       </div>
-      <div></div>
     </section>
   );
 }
