@@ -38,10 +38,10 @@ export default function TwitchHeroSection() {
             </div>
 
             {/* center column twitch content */}
-            <div className="flex flex-col items-center justify-start space-y-6 relative">
+            <div className="flex flex-col items-center justify-start relative">
               <div className="w-full h-[300px] absolute -top-100 right-16 transform -rotate-[1deg] p-4">
                 {/* twitch logo and content */}
-                <div className="absolute top-4 left-3">
+                <div className="absolute top-4 left-2">
                   <Image
                     src="/twitch.svg"
                     alt="Twitch logo"
@@ -58,7 +58,6 @@ export default function TwitchHeroSection() {
                     top: "10px",
                     width: "10.6693696975708px",
                     height: "180px",
-                    rotate: "-1deg",
                   }}
                 >
                   <Image
@@ -67,12 +66,14 @@ export default function TwitchHeroSection() {
                     width={10.6693696975708}
                     height={180}
                     className="object-contain w-full h-full"
-                    style={{ filter: "brightness(1.2) contrast(1.1)" }}
+                    style={{
+                      filter: "brightness(1.2) contrast(1.1)",
+                    }}
                   />
                 </div>
 
                 {/* text content */}
-                <div className="absolute top-4 left-[250px] flex flex-col justify-start text-left -rotate-[4deg]">
+                <div className="absolute top-4 left-[250px] flex flex-col justify-start text-left -rotate-[3deg]">
                   <h2
                     className="text-white uppercase"
                     style={{
@@ -95,7 +96,7 @@ export default function TwitchHeroSection() {
                       letterSpacing: "0%",
                     }}
                   >
-                    CANLIDAYIZ
+                    CANLIDAYIZ!
                   </h2>
                   <p
                     className="text-white mt-2"
@@ -111,14 +112,20 @@ export default function TwitchHeroSection() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-12 left-40 flex items-center gap-4 rotate-[-4deg]">
+                <div
+                  className="absolute bottom-12 left-40 flex items-center gap-4 rotate-[-3deg]"
+                  style={{
+                    borderRadius: "16px",
+                    padding: "12px 16px",
+                    border: "1.5px solid #222",
+                  }}
+                >
                   {/* follow button */}
                   <button
                     className="flex items-center bg-[#864CF6]  text-white rounded-lg transition-colors"
                     style={{
                       width: "106.25103287457594px",
                       height: "37.091740669121776px",
-
                       opacity: 1,
                       borderRadius: "7.03px",
                       gap: "8.2px",
@@ -131,17 +138,25 @@ export default function TwitchHeroSection() {
                     <Image
                       src="/hearth.svg"
                       alt="heart"
-                      width={15.92637010269168}
-                      height={13.666360275248}
+                      width={16}
+                      height={16}
                     />
-                    <span className="text-xs font-medium">Takip Et</span>
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        fontSize: "14px",
+                        fontFamily: "Helvetica, sans-serif",
+                      }}
+                    >
+                      Takip Et
+                    </span>
                   </button>
 
                   {/* subscribe button */}
                   <button
                     className="flex items-center bg-[#222123] text-white rounded-lg transition-colors"
                     style={{
-                      width: "120px",
+                      width: "140px",
                       height: "37.091740669121776px",
                       opacity: 1,
                       borderRadius: "7.03px",
@@ -152,8 +167,16 @@ export default function TwitchHeroSection() {
                       paddingLeft: "14.06px",
                     }}
                   >
-                    <Image src="/star.svg" alt="star" width={14} height={14} />
-                    <span className="text-xs font-medium">Abone Ol</span>
+                    <Image src="/star.svg" alt="star" width={20} height={20} />
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        fontSize: "14px",
+                        fontFamily: "Helvetica, sans-serif",
+                      }}
+                    >
+                      Abone Ol
+                    </span>
                     <Image
                       src="/dropdown.svg"
                       alt="dropdown"
@@ -183,7 +206,7 @@ export default function TwitchHeroSection() {
       </div>
 
       {/* konser.jpg */}
-      <div className="absolute bottom-[250px] h-[200px] z-5 w-full max-w-[1300px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[250px] h-[190px] z-5 w-full max-w-[1350px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/konser.jpg"
           alt="Concert scene"

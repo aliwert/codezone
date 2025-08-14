@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
+import { TfiArrowLeft, TfiArrowRight } from "react-icons/tfi";
 
 export default function HeroSection() {
   return (
@@ -29,7 +30,7 @@ export default function HeroSection() {
           priority
         />
         {/* right darkening */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/90" />
         {/* top gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
         {/* bottom gradient */}
@@ -79,7 +80,7 @@ export default function HeroSection() {
             </p>
 
             {/* cta */}
-            <div className="relative w-[130px] h-[42px] top-[12px] select-none cursor-pointer hover:opacity-90 transition-opacity">
+            <div className="relative w-[130px] h-[42px] top-[20px] select-none cursor-pointer hover:opacity-90 transition-opacity">
               <Image src="/devaminioku.svg" alt="Devamını Oku" fill priority />
               <span
                 className="absolute left-[16px] top-[6px] text-[14px] font-bold"
@@ -93,7 +94,13 @@ export default function HeroSection() {
             </div>
 
             {/* pagination dots */}
-            <div className="relative z-20 mt-32 flex items-center gap-2 top-8">
+            <div
+              className="relative z-20 mt-32 flex items-center gap-2 top-8"
+              style={{
+                marginLeft: "3px",
+                marginTop: "20px",
+              }}
+            >
               <Image src="/Ellipse 3.svg" alt="dot" width={6} height={6} />
               <Image src="/Ellipse 3.svg" alt="dot" width={6} height={6} />
               <Image src="/Ellipse 4.svg" alt="dot" width={6} height={6} />
@@ -111,13 +118,13 @@ export default function HeroSection() {
       </div>
 
       {/* left arrow  */}
-      <button className="absolute left-15 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
-        <Image src="/left-arrow.svg" alt="Previous" width={24} height={24} />
+      <button className="absolute left-15 top-1/2 -translate-y-1/2 hover:opacity-80 transition-opacity">
+        <TfiArrowLeft size={30} />
       </button>
 
       {/* right arrow */}
       <button className="absolute right-10 top-1/2 -translate-y-1/2 z-20 hover:opacity-80 transition-opacity">
-        <Image src="/right-arrow.svg" alt="Next" width={24} height={24} />
+        <TfiArrowRight size={30} />
       </button>
 
       {/* bottom torn vector */}

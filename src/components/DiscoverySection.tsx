@@ -379,31 +379,42 @@ export default function DiscoverySection() {
               GELİŞMELERDEN İLK SEN HABERDAR OL!
             </h3>
 
-            <label
-              className="block text-white/80 mb-2"
-              style={{
-                fontFamily: "var(--font-saira), sans-serif",
-                marginTop: "32px",
-              }}
+            <div
+              className="flex items-center justify-between"
+              style={{ marginTop: "32px" }}
             >
-              EMAIL
-            </label>
-            <div className="relative">
-              <input
-                type="email"
-                className="w-full bg-transparent border-0 border-b border-[#2B2B2B] rounded-none px-0 pb-2 text-white placeholder:text-white/50 focus:outline-none"
-                placeholder=""
-              />
+              <label
+                className="text-white"
+                style={{
+                  fontFamily: "var(--font-saira), sans-serif",
+                  fontSize: "14px",
+                }}
+              >
+                EMAIL
+              </label>
               <button
                 type="button"
-                className="absolute right-0 top-1/2 -translate-y-1/2 text-[#F0E74D] p-1"
+                className="text-[#F0E74D] inline-flex items-center gap-2 p-1"
                 title="Gönder"
+                style={{
+                  fontFamily: "var(--font-saira), sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: "0.02em",
+                  fontSize: "14px",
+                }}
               >
-                <p>
-                  Gönder <ArrowRight />{" "}
-                </p>
+                GÖNDER
+                <ArrowRight size={18} />
               </button>
             </div>
+
+            {/* Input underline */}
+            <input
+              type="email"
+              aria-label="Email"
+              className="mt-2 w-full bg-transparent border-0 border-b border-[#2B2B2B] rounded-none px-0 pb-2 text-white placeholder:text-white/50 focus:outline-none"
+              placeholder=""
+            />
           </div>
 
           {/* social media icons */}
@@ -422,28 +433,50 @@ export default function DiscoverySection() {
 
           {/* footer links */}
           <div
-            className="flex gap-32 text-white"
+            className="grid grid-cols-3 gap-x-10 gap-y-4 text-white"
             style={{
               fontFamily: "var(--font-saira), sans-serif",
               marginTop: "60px",
             }}
           >
-            <div className="flex flex-col gap-4">
+            <div
+              className="flex flex-col gap-4"
+              style={{
+                fontWeight: 400,
+                fontSize: "14px",
+              }}
+            >
               <div>HABERLER</div>
               <div>MÜZİKLER</div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div
+              className="flex flex-col gap-4"
+              style={{
+                fontWeight: 400,
+                fontSize: "14px",
+              }}
+            >
               <div>ETKİNLİKLER</div>
               <div>VİDEOLAR</div>
+            </div>
+            <div
+              className="flex flex-col-reverse gap-4"
+              style={{
+                fontWeight: 400,
+                fontSize: "14px",
+              }}
+            >
               <div>İLETİŞİM</div>
             </div>
           </div>
 
           <div
-            className="text-white/60"
+            className="text-[#494949]"
             style={{
               fontFamily: "var(--font-saira), sans-serif",
               marginTop: "32px",
+              fontWeight: 400,
+              fontSize: "14px",
             }}
           >
             © RAPKOLOGY All Rights Are Reserved 2022.
