@@ -30,11 +30,11 @@ export default function HeroSection() {
           priority
         />
         {/* right darkening */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/100" />
         {/* top gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent pointer-events-none" />
         {/* bottom gradient */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
         {/* texture overlay */}
         <Image
           src="/metal-texture-with-dust-scratches-cracks-textured-backgrounds (1) 1.png"

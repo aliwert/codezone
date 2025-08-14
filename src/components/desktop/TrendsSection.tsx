@@ -65,13 +65,15 @@ export default function TrendsSection() {
       {/* header */}
       <header
         className="flex items-center gap-8"
-        style={{ marginBottom: "100px" }}
+        style={{ marginBottom: "90px" }}
       >
         <h1
           className="text-white text-6xl font-bold uppercase"
           style={{
             fontFamily: "var(--font-saira-condensed), sans-serif",
             letterSpacing: "-2px",
+
+            zIndex: 99999,
           }}
         >
           TRENDLER
@@ -82,6 +84,9 @@ export default function TrendsSection() {
           src="/trend.svg"
           width={66}
           height={66}
+          style={{
+            zIndex: 99999,
+          }}
         />
       </header>
 
@@ -100,6 +105,7 @@ export default function TrendsSection() {
                 fontSize: "60px",
                 fontWeight: 700,
                 fontStyle: "bold",
+                marginLeft: "10px",
               }}
             >
               {article.id}
@@ -107,7 +113,7 @@ export default function TrendsSection() {
 
             {/* author section */}
             <div className="flex items-center gap-3 absolute top-4 left-[120px]">
-              <div className="w-[35px] h-[35px] relative rounded-full overflow-hidden">
+              <div className="w-[35px] h-[35px] relative rounded-lg overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.author}
@@ -128,12 +134,13 @@ export default function TrendsSection() {
 
             {/* article title */}
             <div
-              className="w-[280px] absolute top-[55px] left-[120px] text-white leading-tight"
+              className="w-[300px] absolute top-[55px] left-[120px] text-white leading-tight"
               style={{
                 fontFamily: "var(--font-saira-condensed), sans-serif",
-                fontSize: "20px",
+                fontSize: "25px",
                 fontWeight: 700,
-                lineHeight: "1.3",
+                lineHeight: "104%",
+                marginTop: "10px",
               }}
             >
               {article.title}
@@ -167,20 +174,38 @@ export default function TrendsSection() {
 
       {/* tumunu gor section */}
       <div
-        className="flex justify-center"
-        style={{ marginTop: "60px", marginBottom: "40px" }}
+        className="relative z-10 flex justify-center"
+        style={{
+          marginTop: "40px",
+        }}
       >
-        <div className="relative w-[186.125] h-[48.28818893432617] select-none transition-opacity">
-          <Image src="/tumunugor.svg" alt="Tümünü Gör" fill priority />
+        <div className="relative inline-block">
           <span
-            className="absolute inset-0 flex items-center justify-center text-[16px] font-bold"
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              transform: "translate(-8px, 6px)",
+              background: "#0B0B0B",
+              borderRadius: "2px",
+              clipPath: "polygon(0 0, 100% 0, 93% 100%, 6% 95%);",
+            }}
+          />
+
+          <button
+            type="button"
+            className="relative z-[1] h-[45px] px-8 text-black font-bold"
             style={{
               fontFamily: "var(--font-saira), sans-serif",
-              color: "#121212",
+              width: "200px",
+              background: "white",
+              border: "1px solid white",
+              borderRadius: "2px",
+              cursor: "pointer",
+              clipPath: "polygon(0 0, 100% 0, 93% 100%, 6% 95%);",
             }}
           >
             Tümünü Gör
-          </span>
+          </button>
         </div>
       </div>
     </section>

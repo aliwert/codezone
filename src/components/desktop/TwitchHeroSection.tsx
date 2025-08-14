@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function TwitchHeroSection() {
   return (
-    <section className="relative w-full h-[80vh] bg-zinc-800 overflow-hidden Saira">
+    <section
+      className="relative w-full h-[80vh] bg-zinc-800 overflow-hidden Saira"
+      style={{ marginBottom: "-150px" }}
+    >
       {/* background container */}
       <div className="absolute inset-0 z-0">
         {/* background texture */}
@@ -37,7 +40,7 @@ export default function TwitchHeroSection() {
               </div>
             </div>
 
-            {/* center column twitch content */}
+            {/* twitch content */}
             <div className="flex flex-col items-center justify-start relative">
               <div className="w-full h-[300px] absolute -top-100 right-16 transform -rotate-[1deg] p-4">
                 {/* twitch logo and content */}
@@ -52,22 +55,21 @@ export default function TwitchHeroSection() {
 
                 {/* separator */}
                 <div
-                  className="absolute opacity-80"
+                  className="absolute opacity-80 rotate-[-2deg]"
                   style={{
                     left: "220px",
-                    top: "10px",
+                    top: "30px",
                     width: "10.6693696975708px",
-                    height: "180px",
+                    height: "135.6890106201172px",
                   }}
                 >
-                  <Image
-                    src="/seperate.svg"
-                    alt="separator"
-                    width={10.6693696975708}
-                    height={180}
-                    className="object-contain w-full h-full"
+                  <div
+                    aria-hidden
+                    className="absolute left-1/2 -translate-x-1/2 top-0 h-full"
                     style={{
-                      filter: "brightness(1.2) contrast(1.1)",
+                      width: "2px",
+                      background: "#3B3B3B",
+                      borderRadius: "1px",
                     }}
                   />
                 </div>
@@ -205,19 +207,18 @@ export default function TwitchHeroSection() {
         </div>
       </div>
 
-      {/* konser.jpg */}
-      <div className="absolute bottom-[280px] h-[190px] z-5 w-full max-w-[1350px] left-1/2 transform -translate-x-1/2">
+      {/* konser image */}
+      <div className="absolute bottom-[280px] h-[600px] z-19 w-full max-w-[1300px] left-1/2 transform -translate-x-1/2 ">
         <Image
-          src="/konser.jpg"
+          src="/konser.png"
           alt="Concert scene"
           fill
           className="object-cover opacity-50"
-          style={{ filter: "grayscale(0.9) contrast(0.5) brightness(0.3)" }}
         />
       </div>
 
       {/* Vector-2.svg */}
-      <div className="absolute bottom-[190px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[210px] z-20 w-full max-w-[1400px] left-1/2 transform -translate-x-1/2">
         <Image
           src="/Vector3.svg"
           alt="segmented bottom edge"
