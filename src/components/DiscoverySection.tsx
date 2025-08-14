@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 import {
   FiAlignJustify,
-  FiSearch,
   FiSend,
   FiArrowRight as ArrowRight,
 } from "react-icons/fi";
@@ -320,7 +319,10 @@ export default function DiscoverySection() {
         </div>
 
         {/* right categories + newsletter */}
-        <aside className="w-[416px] flex flex-col">
+        <aside
+          className="w-[416px] flex flex-col"
+          style={{ marginTop: "-110px" }}
+        >
           <h2
             className="font-saira-cond-40-bold text-white mb-12"
             style={{
@@ -342,12 +344,17 @@ export default function DiscoverySection() {
                   key={button.id}
                   type="button"
                   onClick={() => setActiveCategory(button.id)}
-                  className={`h-auto px-5 py-2.5 rounded-full border transition-colors ${
+                  className={`h-[40px] w-auto border transition-colors ${
                     active
                       ? "bg-[#F0E74D] text-black border-[#121212]"
                       : "bg-transparent text-white border-white hover:bg-white/10"
                   }`}
-                  style={{ fontFamily: "var(--font-saira), sans-serif" }}
+                  style={{
+                    fontFamily: "var(--font-saira), sans-serif",
+                    fontWeight: active ? 700 : 200,
+                    letterSpacing: "0.02em",
+                    padding: "0 20px",
+                  }}
                 >
                   {button.label}
                 </button>
@@ -356,12 +363,16 @@ export default function DiscoverySection() {
           </div>
 
           {/* newsletter section */}
-          <div className="mb-16">
+          <div
+            style={{
+              marginTop: "200px",
+            }}
+          >
             <h3
-              className="mb-4 text-white"
+              className="text-white"
               style={{
                 fontFamily: "var(--font-saira-condensed), sans-serif",
-                fontSize: "32px",
+                fontSize: "40px",
                 fontWeight: 700,
               }}
             >
@@ -370,14 +381,17 @@ export default function DiscoverySection() {
 
             <label
               className="block text-white/80 mb-2"
-              style={{ fontFamily: "var(--font-saira), sans-serif" }}
+              style={{
+                fontFamily: "var(--font-saira), sans-serif",
+                marginTop: "32px",
+              }}
             >
               EMAIL
             </label>
             <div className="relative">
               <input
                 type="email"
-                className="w-full bg-transparent border-0 border-b border-white rounded-none px-0 pb-2 text-white placeholder:text-white/50 focus:outline-none"
+                className="w-full bg-transparent border-0 border-b border-[#2B2B2B] rounded-none px-0 pb-2 text-white placeholder:text-white/50 focus:outline-none"
                 placeholder=""
               />
               <button
@@ -385,24 +399,34 @@ export default function DiscoverySection() {
                 className="absolute right-0 top-1/2 -translate-y-1/2 text-[#F0E74D] p-1"
                 title="Gönder"
               >
-                <FiSend className="w-4 h-4" />
+                <p>
+                  Gönder <ArrowRight />{" "}
+                </p>
               </button>
             </div>
           </div>
 
           {/* social media icons */}
-          <div className="flex gap-4 mb-16 text-[#F0E74D]">
-            <FaFacebookF width={23} height={22} />
-            <FaTwitter width={24} height={20} />
-            <FaDiscord width={23} height={19} />
-            <FaSpotify width={23} height={19} />
-            <FaYoutube width={23} height={19} />
+          <div
+            className="flex items-center gap-4 text-[#F0E74D]"
+            style={{
+              marginTop: "35px",
+            }}
+          >
+            <FaFacebookF size={25} />
+            <FaTwitter size={28} />
+            <FaDiscord size={32} />
+            <FaSpotify size={35} />
+            <FaYoutube size={38} />
           </div>
 
           {/* footer links */}
           <div
-            className="flex gap-32 mb-8 text-white"
-            style={{ fontFamily: "var(--font-saira), sans-serif" }}
+            className="flex gap-32 text-white"
+            style={{
+              fontFamily: "var(--font-saira), sans-serif",
+              marginTop: "60px",
+            }}
           >
             <div className="flex flex-col gap-4">
               <div>HABERLER</div>
@@ -417,7 +441,10 @@ export default function DiscoverySection() {
 
           <div
             className="text-white/60"
-            style={{ fontFamily: "var(--font-saira), sans-serif" }}
+            style={{
+              fontFamily: "var(--font-saira), sans-serif",
+              marginTop: "32px",
+            }}
           >
             © RAPKOLOGY All Rights Are Reserved 2022.
           </div>
