@@ -304,6 +304,19 @@ export default function DiscoverySection() {
               ))}
             </div>
           )}
+
+          {/* loading spinner */}
+          <div className="flex justify-center">
+            <Image
+              src="/loading.svg"
+              alt="Loading"
+              width={30}
+              height={30}
+              style={{
+                marginTop: "100px",
+              }}
+            />
+          </div>
         </div>
 
         {/* right categories + newsletter */}
