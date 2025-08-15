@@ -1,16 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
+type NavbarProps = {
+  blur?: boolean;
+};
+
+export default function Navbar({ blur = true }: NavbarProps) {
   return (
     <nav
+      className={
+        (blur ? "backdrop-blur-2xl " : "backdrop-blur-0 bg-[#121212]") + ""
+      }
       style={{
         width: "1440px",
         height: "80px",
-        background: "#121212",
         borderBottom: "1px solid #2A2A2A",
-        backdropFilter: "blur(24px)",
-        WebkitBackdropFilter: "blur(24px)",
+
         opacity: 1,
         position: "relative",
         zIndex: 50,
@@ -44,11 +51,11 @@ export default function Navbar() {
         <div
           style={{
             position: "absolute",
-            top: "50%",
-            left: "50%",
+            top: "55%",
+            left: "47%",
             transform: "translate(-50%, -50%)",
             display: "flex",
-            gap: "40px",
+            gap: "35px",
             alignItems: "center",
           }}
         >

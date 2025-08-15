@@ -37,8 +37,8 @@ export default function BlogSection() {
 
   return (
     <section className="relative w-full min-h-[90vh] overflow-hidden bg-[#0B0B0B] text-white">
-      <div className="w-full flex justify-center relative">
-        <Navbar />
+      <div className="w-full flex justify-center relative bg-[#121212]">
+        <Navbar blur={false} />
       </div>
 
       {/* bg layers */}
