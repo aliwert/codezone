@@ -163,22 +163,33 @@ export default function FavoritesOfMonths() {
               >
                 {/* ranking */}
                 <div
-                  className="inline-flex items-center px-2 py-1.5 rounded-full bg-white/10 text-sm font-medium whitespace-nowrap"
+                  className="inline-flex items-center rounded-full bg-[#323232] whitespace-nowrap"
                   style={{
-                    width: "120px",
+                    width: "130px",
                     height: "23px",
                     opacity: 1,
-                    paddingTop: "7px",
-                    paddingRight: "16.06px",
-                    paddingBottom: "10.55px",
-                    paddingLeft: "14.06px",
+                    paddingTop: "5px",
+                    paddingRight: "10px",
+                    paddingBottom: "5px",
+                    paddingLeft: "10px",
                   }}
                 >
-                  {card.ranking}
+                  {(() => {
+                    const txt = card.ranking;
+                    const i = txt.indexOf(" (");
+                    const left = i !== -1 ? txt.slice(0, i) : txt;
+                    const right = i !== -1 ? txt.slice(i) : "";
+                    return (
+                      <>
+                        <span className="font-normal">{left}</span>
+                        {right && <span className="font-bold">{right}</span>}
+                      </>
+                    );
+                  })()}
                 </div>
 
                 {/* artist + song */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center ">
                   <div
                     className="text-xl text-white"
                     style={{
@@ -190,7 +201,10 @@ export default function FavoritesOfMonths() {
                   </div>
                   <div
                     className="text-lg font-extrabold"
-                    style={{ marginRight: card.songMarginRight ?? 0 }}
+                    style={{
+                      marginRight: card.songMarginRight ?? 0,
+                      marginTop: "-6px",
+                    }}
                   >
                     {card.song}
                   </div>
