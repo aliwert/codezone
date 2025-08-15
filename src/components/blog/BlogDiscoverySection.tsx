@@ -39,7 +39,7 @@ const posts: Post[] = [
     id: 2,
     authorAvatar: "/image1.png",
     authorName: "Jonathan Stewart",
-    featuredImage: "/kesfet2.png",
+    featuredImage: "/kesfet6.png",
     date: "29 Mart 2022",
     title:
       "LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT UT ET MASSA MI.  MAURIS NEC LEO NON LIBERO SODALES LOBORTIS. QUISQUE A NEQUE PRETI ...",
